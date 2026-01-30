@@ -1,29 +1,33 @@
-# 🚀 Node.js + Express Template
+# Node.js Express Boilerplate 🚀
 
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,express,javascript,vscode" />
-  <br>
-  <p>Um ponto de partida sólido e opinativo para suas APIs REST.</p>
-</div>
+A clean and organized template for starting RESTful API projects using **Node.js** and **Express**. 
+
+This repository was created as part of my backend development studies, focusing on building a reusable and scalable foundation for future applications.
 
 ---
 
-## 📋 Sobre o Projeto
+### 🛠️ Built With
 
-Este repositório é um **Boilerplate** (modelo inicial) para projetos Backend em Node.js. Ele já vem pré-configurado com as melhores ferramentas de qualidade de código do mercado, economizando o tempo chato de configuração inicial.
-
-### ✨ O que já vem pronto?
-* **Express.js:** Servidor web rápido e minimalista.
-* **ESLint:** Encontra e corrige problemas no seu código JavaScript.
-* **Prettier:** Garante que o código esteja sempre formatado e bonito.
-* **EditorConfig:** Mantém o estilo de codificação consistente entre diferentes editores.
-* **Nodemon:** (Via script dev) Reinicia o servidor automaticamente.
+* **Runtime:** [Node.js](https://nodejs.org/)
+* **Framework:** [Express.js](https://expressjs.com/)
+* **Version Control:** [Git](https://git-scm.com/)
+* **Development Environment:** [WSL2 (Ubuntu)](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 ---
 
-## 🛠 Instalação
+### ✨ Features
 
-1. **Clone o repositório** (ou use como template):
+* **Structured Routing:** Organized folder structure for better maintainability.
+* **Middleware Ready:** Configured for easy integration of custom middlewares.
+* **JSON Handling:** Built-in support for parsing JSON request bodies.
+* **Scalability:** Designed to be easily expanded with Databases (MySQL/PostgreSQL) and Auth (JWT).
+
+---
+
+### 🚀 Getting Started
+
+To get a local copy up and running, follow these simple steps:
+
+#### 1. Clone the repository
 ```bash
 git clone [https://github.com/Allysson-Rodrigues/node-express-template.git](https://github.com/Allysson-Rodrigues/node-express-template.git)
-cd node-express-template
