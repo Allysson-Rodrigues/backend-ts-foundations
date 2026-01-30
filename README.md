@@ -33,5 +33,4 @@ To get a local copy up and running, follow these simple steps:
 ```bash
 git clone [https://github.com/Allysson-Rodrigues/node-express-template.git](https://github.com/Allysson-Rodrigues/node-express-template.git)
 
-test
 ```
