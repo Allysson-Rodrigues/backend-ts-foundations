@@ -43,6 +43,7 @@ Run the application with hot-reload enabled (Nodemon):
 
 Bash
 dev # Short for: npm run dev
+
 🐳 Docker Workflow
 This template is fully containerized. You can build and run it using the following commands (standardized with your dotfiles):
 
@@ -58,6 +59,7 @@ Monitor your containers:
 
 Bash
 dps # Displays running containers with formatted table
+
 📂 Project Structure
 Plaintext
 .
@@ -67,6 +69,7 @@ Plaintext
 ├── server.js         # Application entry point
 ├── package.json      # Scripts and dependencies
 └── COMMANDS.md       # Quick reference for dev commands
+
 🤝 Contributing
 Fork the Project
 
