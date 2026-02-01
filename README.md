@@ -44,6 +44,13 @@ Run the application with hot-reload enabled (Nodemon):
 Bash
 dev # Short for: npm run dev
 
+**Set Up Environment Variables**
+Create a `.env` file in the root:
+
+````env
+PORT=3000
+NODE_ENV=development
+
 🐳 Docker Workflow
 
 This template is fully containerized. You can build and run it using the following commands (standardized with your dotfiles):
@@ -65,12 +72,13 @@ dps # Displays running containers with formatted table
 
 Plaintext
 .
-├── .devcontainer/ # VS Code Dev Container settings
-├── .github/ # GitHub Actions CI/CD workflows
-├── node_modules/ # Project dependencies (git ignored)
-├── server.js # Application entry point
-├── package.json # Scripts and dependencies
-└── COMMANDS.md # Quick reference for dev commands
+├── src/
+│   ├── controllers/    # Business logic
+│   ├── routes/         # Route definitions
+│   └── app.js          # Express app configuration
+├── .env                # Local secrets (gitignored)
+├── server.js           # Entry point (loads dotenv)
+└── package.json        # Scripts and type: "module"
 
 🤝 Contributing
 
@@ -91,4 +99,4 @@ Developed with ❤️ by Allysson Rodrigues
 
 ```bash
 git clone [https://github.com/Allysson-Rodrigues/node-express-template.git](https://github.com/Allysson-Rodrigues/node-express-template.git)
-```
+````
