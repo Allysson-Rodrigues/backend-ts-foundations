@@ -28,18 +28,18 @@ A clean, standardized, and production-ready template for starting RESTful API pr
 
 🚀 Getting Started
 
+🚀 Getting Started
 To get a local copy up and running, follow these steps:
 
 1. Clone the repository
-Bash
-git clone https://github.com/Allysson-Rodrigues/node-express-template.git
-cd node-express-template
+   Bash
+   git clone https://github.com/Allysson-Rodrigues/node-express-template.git
+   cd node-express-template
 2. Install Dependencies
-Using your professional aliases for faster workflow:
+   Using your professional aliases for faster workflow:
 
 Bash
-ni  # Short for: npm install
-3. Start Development Server
+ni # Short for: npm install 3. Start Development Server
 Run the application with hot-reload enabled (Nodemon):
 
 Bash
@@ -66,12 +66,12 @@ dps # Displays running containers with formatted table
 
 Plaintext
 .
-├── .devcontainer/    # VS Code Dev Container settings
-├── .github/          # GitHub Actions CI/CD workflows
-├── node_modules/     # Project dependencies (git ignored)
-├── server.js         # Application entry point
-├── package.json      # Scripts and dependencies
-└── COMMANDS.md       # Quick reference for dev commands
+├── .devcontainer/ # VS Code Dev Container settings
+├── .github/ # GitHub Actions CI/CD workflows
+├── node_modules/ # Project dependencies (git ignored)
+├── server.js # Application entry point
+├── package.json # Scripts and dependencies
+└── COMMANDS.md # Quick reference for dev commands
 
 🤝 Contributing
 
