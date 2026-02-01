@@ -6,7 +6,7 @@ services:
     build: .
     container_name: node-api-service
     ports:
-      - "5000:5000"
+      - '5000:5000'
     env_file:
       - .env
     depends_on:
@@ -19,7 +19,7 @@ services:
     image: mongo:latest
     container_name: mongodb-service
     ports:
-      - "27017:27017"
+      - '27017:27017'
     volumes:
       - mongo-data:/data/db
     networks:
