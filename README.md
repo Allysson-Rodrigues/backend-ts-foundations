@@ -64,15 +64,14 @@ Monitor your containers: dps (Displays running containers with formatted table)
 
 Plaintext
 .
-.
 ├── src/
-│ ├── controllers/ # Business logic
-│ ├── routes/ # Route definitions
-│ └── app.js # Express app configuration
-├── .github/ # GitHub Actions CI/CD workflows
-├── .env # Local secrets (gitignored)
-├── server.js # Entry point (loads dotenv)
-└── package.json # Scripts and type: "module"
+│   ├── controllers/    # Business logic
+│   ├── routes/         # Route definitions
+│   └── app.js          # Express app configuration
+├── .github/            # GitHub Actions CI/CD workflows
+├── .env                # Local secrets (gitignored)
+├── server.js           # Entry point (loads dotenv)
+└── package.json        # Scripts and type: "module"
 
 🤝 Contributing
 
