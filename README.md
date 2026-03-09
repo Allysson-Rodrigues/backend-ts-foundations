@@ -1,75 +1,101 @@
 # Backend TypeScript Foundations
 
-![CI Status](https://github.com/Allysson-Rodrigues/backend-ts-foundations/actions/workflows/main.yml/badge.svg)
+[![CI Status](https://github.com/Allysson-Rodrigues/backend-ts-foundations/actions/workflows/main.yml/badge.svg)](https://github.com/Allysson-Rodrigues/backend-ts-foundations/actions/workflows/main.yml)
 
-A professional, high-performance, and production-ready foundation for scalable RESTful APIs. Built with **TypeScript**, **Node.js 24+**, and **Clean Architecture** principles.
+Backend-first starter for scalable REST APIs with TypeScript, Express 5, native ESM, and a clean separation between delivery code and business rules.
 
----
+## What this repository gives you
 
-### Core Stack
+- Express 5 + TypeScript baseline ready for extension
+- Clean Architecture-inspired folder split across `main` and `presentation`
+- Built-in health endpoint at `GET /api/health`
+- Vitest + Supertest coverage for the application surface
+- Biome-based linting and formatting
+- Docker build verification in CI
 
-- **Runtime**: [Node.js 24+ (LTS)](https://nodejs.org/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Framework**: [Express.js v5+](https://expressjs.com/)
-- **Execution**: [tsx](https://tsx.is/) (Native ESM Support)
-- **Quality**: [Biome](https://biomejs.dev/) & [Vitest](https://vitest.dev/)
+## Core stack
 
----
+- Runtime: Node.js 24+
+- Framework: Express 5
+- Language: TypeScript
+- Execution: `tsx`
+- Quality: Biome, Vitest, Supertest
 
-### Engineering Features
+## Architecture snapshot
 
-- **Strict Typing**: Full TypeScript implementation for maximum reliability.
-- **Modern ESM**: Native ECMAScript Modules support.
-- **Standards-First**: Pre-configured Biome (Fastest Lint/Format) and Vitest.
-- **Zero Vulnerabilities**: 100% dependency health audited for 2025 standards.
-- **Clean Architecture**: Strict separation between Domain, Presentation, and Main layers.
-
----
-
-### Getting Started
-
-1. **Clone & Setup**
-   ```bash
-   git clone https://github.com/Allysson-Rodrigues/backend-ts-foundations.git
-   cd backend-ts-foundations
-   npm install
-   ```
-
-2. **Environment**
-   Create a `.env` file based on your infrastructure needs:
-   ```env
-   PORT=3000
-   NODE_ENV=development
-   ```
-
-3. **Development**
-   ```bash
-   npm run dev
-   ```
-
-4. **Testing**
-   ```bash
-   npm test
-   ```
-
----
-
-### Architecture Overview
-
-```plaintext
+```text
 .
 ├── src/
-│   ├── domain/        # Entities and Use Cases (Pure Business Logic)
-│   ├── presentation/  # Controllers (Framework Independent)
-│   ├── main/          # Infrastructure, Adapters, and Composition
-│   ├── app.ts         # Express application bootstrap
-│   └── server.ts      # Application entry point
-├── dist/              # Compiled output (Gitignored)
-├── .env               # Infrastructure secrets
-└── package.json       # Scripts and dependencies
+│   ├── main/          Composition root, route wiring, and adapters
+│   ├── presentation/  HTTP controllers and protocols
+│   ├── app.ts         Express bootstrap
+│   └── server.ts      Runtime entry point
+├── Dockerfile
+├── biome.json
+├── tsconfig.json
+└── package.json
 ```
 
----
+The current template keeps the application intentionally small: one health controller, one route adapter, and the bootstrap path needed to scale the project without coupling business rules to Express.
 
-**Allysson Rodrigues**
-Backend Infrastructure & AI Engineering
+## Local setup
+
+1. Install dependencies:
+
+```bash
+npm ci
+```
+
+2. Create a local environment file:
+
+```env
+PORT=3000
+NODE_ENV=development
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Verify the API:
+
+```bash
+curl http://localhost:3000/api/health
+```
+
+## Environment contract
+
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `PORT` | `3000` | HTTP port used by `src/server.ts` |
+| `NODE_ENV` | `development` | Runtime mode and local behavior |
+
+## Quality gate
+
+```bash
+npm run lint
+npm run test
+npm run build
+```
+
+Available maintenance scripts:
+
+- `npm run lint:fix`
+- `npm run format`
+- `npm run test:watch`
+
+## CI and delivery
+
+GitHub Actions runs on every push and pull request to `main`:
+
+- lint with Biome
+- automated tests with Vitest
+- Docker image build verification
+
+For deployment, `npm run build` emits `dist/server.js`, and the included `Dockerfile` supports container-based delivery when you want a reproducible runtime image.
+
+## License
+
+MIT
